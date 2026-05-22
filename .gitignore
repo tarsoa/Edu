@@ -1,0 +1,11 @@
+# Chaves e dados sensíveis de ambiente
+.env
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Configurações locais do ambiente virtual (caso use)
+venv/
+.venv/
+
