@@ -1,5 +1,12 @@
 # 🤖 Edu - Agente Financeiro Inteligente com IA Generativa
 
+## Evidência da execução
+
+![Evidência de Execução](./evidencia-execucao.png)
+
+
+
+
 ## 📌 Contexto e Caso de Uso
 O **Edu** é um educador financeiro inteligente e didático projetado para ajudar o cliente João a compreender seus hábitos de consumo e organizar suas finanças pessoais. Em vez de apenas responder perguntas genéricas, o Edu utiliza a base de dados real do cliente para contextualizar gastos, alertar sobre despesas elevadas (como alimentação) e direcionar o usuário para objetivos práticos, como a construção da sua reserva de emergência.
 
@@ -73,4 +80,6 @@ Custos: Otimizados utilizando a camada gratuita (Free Tier) de prototipagem do G
 Logs de Erro: Capturados diretamente via console do Python, garantindo estabilidade e impedindo o travamento da interface visual.
 
 ---
+
+
 
