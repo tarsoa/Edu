@@ -4,7 +4,10 @@
 
 ![Evidência de Execução](./evidencia-execucao.png)
 
+## 🎥 Apresentação do Projeto
+A interface da aplicação conta com uma seção dedicada à apresentação do projeto através de um vídeo explicativo de 3 minutos. Para garantir a melhor experiência de uso e interface, o player foi integrado na área principal utilizando um layout moderno de colunas (`st.columns`). Esta abordagem garante o espaço horizontal necessário para que o navegador ative nativamente todos os controles de mídia, incluindo o ajuste de volume e o botão de **Tela Cheia (Full Screen)**.
 
+> 🌐 **Nota sobre o vídeo:** O vídeo de demonstração está integrado diretamente no código fonte através do link oficial do YouTube, dispensando a necessidade de arquivos locais pesados no repositório.
 
 
 ## 📌 Contexto e Caso de Uso
@@ -25,11 +28,7 @@ Inicialmente, o projeto previa a utilização de modelos locais via Ollama. Visa
 
 ```text
 EDU/
-├── 📄 .env                           # Chave de API protegida (não versionada)
-├── 📄 .gitignore                     # Filtros do Git
-├── 📄 README.md                      # Documentação principal
-├── 📄 requirements.txt               # Dependências do projeto
-├── 📁 data/                          # Base de Conhecimento (Dados Mockados)
+├── 📁 data/                          # Base de Conhecimento (Dados do Cliente)
 │   ├── historico_atendimento.csv     # Atendimentos anteriores
 │   ├── perfil_investidor.json        # Perfil e metas do João
 │   ├── produtos_financeiros.json     # Produtos disponíveis
@@ -40,44 +39,48 @@ EDU/
 │   ├── 03-prompts.md
 │   ├── 04-metricas.md
 │   └── 05-pitch.md
-└── 📁 src/                           # Código Fonte
-    ├── app.py                        # Aplicação principal em Streamlit
-    └── testar_gemini.py              # Script de teste de conexão
+├── 📁 src/                           # Código Fonte
+│   ├── app.py                        # Aplicação principal (Layout em colunas com integração do vídeo)
+│   └── testar_gemini.py              # Script de teste de conexão
+├── 📄 .env                           # Chave de API protegida (não versionada)
+├── 📄 .gitignore                     # Filtros do Git
+├── 📄 evidencia-execucao.png         # Captura de tela do sistema em funcionamento
+├── 📄 README.md                      # Documentação principal do projeto
+└── 📄 requirements.txt               # Dependências de bibliotecas do Python
 
+```
 
 ## 🚀 Como Executar a Aplicação
+
 ### 1. Clonar o repositório e acessar a pasta:
 
-```
-git clone [https://github.com/tarsoa/Edu.git](https://github.com/tarsoa/Edu.git)
+git clone https://github.com/tarsoa/Edu.git
 cd Edu
-```
 
-2. Configurar as Variáveis de Ambiente:
+
+### 2. Configurar as Variáveis de Ambiente:
 Crie um arquivo chamado .env na raiz do projeto e adicione a sua chave do Google AI Studio:
 
 GEMINI_API_KEY=sua_chave_aqui
 
-3. Instalar as Dependências:
+### 3. Instalar as Dependências:
 Utilize o gerenciador de pacotes para instalar todos os pré-requisitos listados no requirements.txt:
 
-```
 pip install -r requirements.txt
-```
 
-4. Rodar o Chatbot:
+
+### 4. Rodar o Chatbot:
 Execute o servidor local do Streamlit:
 
-```
 streamlit run src/app.py
-```
+
 
 ## 📊 Observabilidade e Métricas
-Latência: Reduzida a milissegundos devido ao processamento distribuído na nuvem do Google.
+- Latência: Reduzida a milissegundos devido ao processamento distribuído na nuvem do Google.
 
-Custos: Otimizados utilizando a camada gratuita (Free Tier) de prototipagem do Gemini.
+- Custos: Otimizados utilizando a camada gratuita (Free Tier) de prototipagem do Gemini.
 
-Logs de Erro: Capturados diretamente via console do Python, garantindo estabilidade e impedindo o travamento da interface visual.
+- Logs de Erro: Capturados diretamente via console do Python, garantindo estabilidade e impedindo o travamento da interface visual.
 
 ---
 
